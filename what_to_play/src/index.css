@@ -1,0 +1,16 @@
+/* -------styling for game info display */
+
+/* -------------form styling*/
+.formArea{
+    border: solid black 3px;
+    border-radius: 10%;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%
+}
+.gameInput{
+    margin-bottom: 10px;
+}
