@@ -14,3 +14,18 @@
 .gameInput{
     margin-bottom: 10px;
 }
+.mainContainerForGameInfo{
+    border: 1px solid black;
+    display: flex;
+    width: 30%;
+    overflow: hidden;
+}
+.gameListHolder{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.imgOfGame{
+    width: 200px;
+    height: 200px;
+}

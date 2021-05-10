@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import games from "../gameData/gamesToPlay";
 import AddingGameForm from './AddingGameForm';
 import GameList from './GameList';
+import SearchingForAGame from './SearchingForAGame';
 
 class MainWhatToPlayContainer extends Component {
     constructor() {
@@ -9,7 +10,8 @@ class MainWhatToPlayContainer extends Component {
 
         this.state = {
             allGames: games,
-            showGameForm: false
+            showGameForm: false,
+            numberUserInputted: 0,
         }
     }
 
@@ -33,6 +35,15 @@ class MainWhatToPlayContainer extends Component {
 
     }
 
+    //search games by amount of players
+    howManyWantToPlay = (number) => {
+
+        this.setState({
+            numberUserInputted: parseInt(number)
+        })
+
+    }
+
 
 
     render() {
@@ -46,11 +57,21 @@ class MainWhatToPlayContainer extends Component {
                     ? <AddingGameForm addGameToList={this.addGameToList} />
                     : null
                 }
+                <SearchingForAGame howManyWantToPlay={this.howManyWantToPlay} />
                 {/* mapping though game array */}
-                {this.state.allGames.map((oneGame, i) =>
-                    <GameList index={i} oneGame={oneGame} />
-                )}
+                <div className='gameListHolder'>
+                    {this.state.allGames.map((oneGame, i) =>
 
+                        this.state.numberUserInputted >= oneGame.minNumberOfPlayers
+                            ?
+                            this.state.numberUserInputted <= oneGame.maxNumberOfPlayers
+                                ? <GameList index={i} oneGame={oneGame} />
+                                : null
+                            // <text>Oh no! Sorry, but you don't have a game for that number of players on file.</text>
+                            : null
+
+                    )}
+                </div>
             </div>
         );
     }
