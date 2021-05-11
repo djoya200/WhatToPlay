@@ -49,10 +49,14 @@ class MainWhatToPlayContainer extends Component {
     render() {
         return (
             <div>
-                <h1>What To Play???</h1>
-
+                <div className="headerDiv">
+                    <text className="pageHeader">What To Play???</text>
+                </div>
                 {/* toggle to show game form */}
-                <button onClick={this.toggleShowGameForm}>Add a Game</button>
+                <div className="buttonContainerForCenter">
+                    <button className='addButton' onClick={this.toggleShowGameForm}>Add a Game</button>
+                </div>
+                
                 {this.state.showGameForm
                     ? <AddingGameForm addGameToList={this.addGameToList} />
                     : null

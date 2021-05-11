@@ -1,4 +1,21 @@
-/* -------styling for game info display */
+/* -----------app background ------- */
+.App{
+    background-color: #c1c1c1;
+    min-height: 100vh;
+}
+
+/* -------headerStyling--------- */
+.headerDiv{
+    border-bottom: solid 3px black;
+    background-color: lightskyblue;
+    margin-bottom: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+}
+.pageHeader{
+    font-size: 65pt;
+}
 
 /* -------------form styling*/
 .formArea{
@@ -14,11 +31,22 @@
 .gameInput{
     margin-bottom: 10px;
 }
+
+/* -----------display for games to play---------- */
 .mainContainerForGameInfo{
-    border: 1px solid black;
+    border: 3px solid black;
     display: flex;
     width: 30%;
     overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.gameInfoBox{
+    background-color: white;
+    max-height: 500px;
+    overflow: scroll;
 }
 .gameListHolder{
     display: flex;
@@ -28,4 +56,27 @@
 .imgOfGame{
     width: 200px;
     height: 200px;
+}
+/* ------------add a game button ---------- */
+.buttonContainerForCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addButton{
+    margin: 20px;
+    background-color: blue;
+    height: 25px;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+/* --------fonts--------- */
+.boldSubHeading{
+    font-style: bold;
+    font-size: 18pt;
 }

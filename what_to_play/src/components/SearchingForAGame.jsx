@@ -15,6 +15,7 @@ class SearchingForAGame extends Component {
             numberUserInputted: event.target.value
         })
     }
+    //this function takes the user input from the DOM and hands it back to the MainWhatToPlayContainer
     passBackUp = (event) => {
         event.preventDefault();
         this.props.howManyWantToPlay(this.state.numberUserInputted)
@@ -24,11 +25,14 @@ class SearchingForAGame extends Component {
     render() {
         return (
             <div>
+
                 <form action="" onSubmit={this.passBackUp}>
-                    <label>Search Games by Number of Players: 
+                    <label className="boldSubHeading">Search Games by Number of Players:   
                         <input type="text" onChange={this.handleChange}/>
                     </label>
-                    <input type="submit" value="Search Games" />
+                    <div className="buttonContainerForCenter">
+                    <input className="addButton" type="submit" value="Search Games" />
+                    </div>
                 </form>
             </div>
         );
