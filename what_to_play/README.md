@@ -17,4 +17,6 @@ Check it out here: [What To Play](http://fathomless-sands-87059.herokuapp.com/)
 ### Future Features: 
 > This app currently allows for you to search for games by the number of people who are going to be playing. In the future I plan to refactor this app and allow it to also search by playing time and category. 
 
+<!-- mainPageScreen -->
+![picutre of website](./readmeImages/mainPageScreen.png)
 
